@@ -33,7 +33,7 @@ CollectorsOptions = collections.namedtuple('CollectorsOptions', [
 def collect_pve(config, host, cluster, node, options: CollectorsOptions):
     """Scrape a host and return prometheus text format for it"""
 
-    pve = ProxmoxAPI(host, timeout=15, **config)
+    pve = ProxmoxAPI(host, **config)
 
     registry = CollectorRegistry()
     if cluster and options.status:
