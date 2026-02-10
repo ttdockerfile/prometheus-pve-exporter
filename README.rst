@@ -381,7 +381,7 @@ Example config for PVE exporter running on PVE node:
           - targets:
             - 192.168.1.2:9221  # Proxmox VE node with PVE exporter.
             - 192.168.1.3:9221  # Proxmox VE node with PVE exporter.
-        metrics_path: /pve
+        metrics_path: /metrics
         params:
           module: [default]
           cluster: ['1']
@@ -397,7 +397,7 @@ Example config for PVE exporter running on Prometheus host:
           - targets:
             - 192.168.1.2  # Proxmox VE node.
             - 192.168.1.3  # Proxmox VE node.
-        metrics_path: /pve
+        metrics_path: /metrics
         params:
           module: [default]
           cluster: ['1']
